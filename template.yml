@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Outputs the time
+Resources:
+  TimeFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      Code:
+        S3Bucket: starter-kit-test
+        S3Key: lambdazip.zip
+      Handler: index.handler
+      Runtime: nodejs10.x
+      Role: arn:aws:iam::040087672732:role/test-role-vishnu
+       
+     
